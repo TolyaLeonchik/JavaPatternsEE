@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList <User> userList = new ArrayList<>();
+        ArrayList<User> userList = new ArrayList<>();
         User userFirst = new User("Pasha4or", "passW0rd", 1234);
         User userSecond = new User("NaTapochek", "pass", 954);
         User userThird = new User("GenaBukin", "123rd", 4123);
@@ -12,7 +12,7 @@ public class Main {
         userList.add(userSecond);
         userList.add(userThird);
 
-        Session session = new Session(userSecond);
+        Session session = new Session(userSecond);      //тут не знал как лучше сделать
 
         session.access("NaTapochek", "pass");
         session.getSalary();

@@ -15,8 +15,8 @@ public class FrontController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    String path = req.getRequestURI();
-    dispatcher(path, "GET", req, resp);
+        String path = req.getRequestURI();
+        dispatcher(path, "GET", req, resp);
     }
 
     @Override
@@ -27,7 +27,7 @@ public class FrontController extends HttpServlet {
     public void dispatcher(String path, String method, HttpServletRequest req,
                            HttpServletResponse resp) throws ServletException, IOException {
         if ("GET".equals(method)) {
-            switch (path) {
+            switch (path) {                                                       //пытался через ENUM но не получилось
                 case "/getIngredients" -> cookController.getIngredients(req, resp);
                 case "/addIngredient" -> cookController.addIngredient(req, resp);
                 case "/deleteIngredient" -> cookController.deleteIngredient(req, resp);
